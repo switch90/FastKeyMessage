@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace FastKeyMessage
 {
     public partial class Form1 : Form
@@ -5,6 +7,10 @@ namespace FastKeyMessage
         globalKeyboardHook gkh = new globalKeyboardHook();
         Pathes pathes = new Pathes();
         Form2 form2 = new Form2();
+
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, int dwExtraInfo);
+
         public Form1()
         {
             InitializeComponent();
@@ -58,8 +64,6 @@ namespace FastKeyMessage
             if (e.KeyCode == Keys.NumPad9)
                 SendMessage(pathes.MessagePath9);
 
-            
-
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -81,12 +85,20 @@ namespace FastKeyMessage
             //разворачиваем окно
             WindowState = FormWindowState.Normal;
         }
-        void SendMessage(string path) //Отправка сообщения
+        private static void SendCtrlhotKey(char key)
         {
+            keybd_event(0x11, 0, 0, 0);
+            keybd_event((byte)key, 0, 0, 0);
+            keybd_event((byte)key, 0, 0x2, 0);
+            keybd_event(0x11, 0, 0x2, 0);
+        }
+
+        void SendMessage(string path) //Отправка сообщения
+        {           
             SendKeys.Send("{BS}");
             string text = File.ReadAllText(path);
             Clipboard.SetText(text);
-            SendKeys.Send("^{v}");
+            SendCtrlhotKey('V');
         }
     }
 }
