@@ -56,11 +56,9 @@ namespace FastKeyMessage
                 SendMessage(pathes.MessagePath8);
 
             if (e.KeyCode == Keys.NumPad9)
-            {
-                Clipboard.SetText(File.ReadAllText(pathes.MessagePath8));
-                SendKeys.Send("{BS}");
-                SendKeys.Send("^V");
-            }
+                SendMessage(pathes.MessagePath9);
+
+            
 
         }
         private void Form1_Resize(object sender, EventArgs e)
@@ -86,8 +84,9 @@ namespace FastKeyMessage
         void SendMessage(string path) //Отправка сообщения
         {
             SendKeys.Send("{BS}");
-            Clipboard.SetText(File.ReadAllText(path));
-            SendKeys.Send("^{V}");
+            string text = File.ReadAllText(path);
+            Clipboard.SetText(text);
+            SendKeys.Send("^{v}");
         }
     }
 }
