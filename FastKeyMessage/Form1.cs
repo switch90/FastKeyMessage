@@ -35,7 +35,7 @@ namespace FastKeyMessage
                 SendMessage(pathes.MessagePath1);
 
             if (e.KeyCode == Keys.NumPad2)
-                SendMessage(pathes.MessagePath2);  
+               SendMessage(pathes.MessagePath2);  
             
             if (e.KeyCode == Keys.NumPad3)
                 SendMessage(pathes.MessagePath3);
@@ -85,9 +85,9 @@ namespace FastKeyMessage
         }
         void SendMessage(string path) //Отправка сообщения
         {
-            Clipboard.SetText(File.ReadAllText(path));
             SendKeys.Send("{BS}");
-            SendKeys.Send("^V");
+            Clipboard.SetText(File.ReadAllText(path));
+            SendKeys.Send("^{V}");
         }
     }
 }
