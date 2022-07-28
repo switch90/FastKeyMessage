@@ -68,7 +68,7 @@
             this.Num4Button.Name = "Num4Button";
             this.Num4Button.Size = new System.Drawing.Size(75, 66);
             this.Num4Button.TabIndex = 4;
-            this.Num4Button.Text = "Num4";
+            this.Num4Button.Text = "Селф Тест";
             this.Num4Button.UseVisualStyleBackColor = true;
             this.Num4Button.Click += new System.EventHandler(this.Num4Button_Click);
             // 
@@ -78,7 +78,7 @@
             this.Num5Button.Name = "Num5Button";
             this.Num5Button.Size = new System.Drawing.Size(75, 66);
             this.Num5Button.TabIndex = 5;
-            this.Num5Button.Text = "Num5";
+            this.Num5Button.Text = "TW ID";
             this.Num5Button.UseVisualStyleBackColor = true;
             this.Num5Button.Click += new System.EventHandler(this.Num5Button_Click);
             // 
@@ -88,7 +88,7 @@
             this.Num6Button.Name = "Num6Button";
             this.Num6Button.Size = new System.Drawing.Size(75, 63);
             this.Num6Button.TabIndex = 6;
-            this.Num6Button.Text = "Num6";
+            this.Num6Button.Text = "Отчет о Конфигурации";
             this.Num6Button.UseVisualStyleBackColor = true;
             this.Num6Button.Click += new System.EventHandler(this.Num6Button_Click);
             // 
@@ -98,7 +98,7 @@
             this.Num7Button.Name = "Num7Button";
             this.Num7Button.Size = new System.Drawing.Size(75, 66);
             this.Num7Button.TabIndex = 7;
-            this.Num7Button.Text = "Num7";
+            this.Num7Button.Text = "Инфо о станции";
             this.Num7Button.UseVisualStyleBackColor = true;
             this.Num7Button.Click += new System.EventHandler(this.Num7Button_Click);
             // 
@@ -108,7 +108,7 @@
             this.Num8Button.Name = "Num8Button";
             this.Num8Button.Size = new System.Drawing.Size(75, 66);
             this.Num8Button.TabIndex = 8;
-            this.Num8Button.Text = "Num8";
+            this.Num8Button.Text = "Соглас Лазаренко";
             this.Num8Button.UseVisualStyleBackColor = true;
             this.Num8Button.Click += new System.EventHandler(this.Num8Button_Click);
             // 
@@ -118,7 +118,7 @@
             this.Num9Button.Name = "Num9Button";
             this.Num9Button.Size = new System.Drawing.Size(75, 66);
             this.Num9Button.TabIndex = 9;
-            this.Num9Button.Text = "Num9";
+            this.Num9Button.Text = "Исправил";
             this.Num9Button.UseVisualStyleBackColor = true;
             this.Num9Button.Click += new System.EventHandler(this.Num9Button_Click);
             // 
@@ -128,7 +128,7 @@
             this.Num1Button.Name = "Num1Button";
             this.Num1Button.Size = new System.Drawing.Size(75, 66);
             this.Num1Button.TabIndex = 10;
-            this.Num1Button.Text = "Num1";
+            this.Num1Button.Text = "Моб Оф";
             this.Num1Button.UseVisualStyleBackColor = true;
             this.Num1Button.Click += new System.EventHandler(this.Num1Button_Click);
             // 
@@ -138,7 +138,7 @@
             this.Num2Button.Name = "Num2Button";
             this.Num2Button.Size = new System.Drawing.Size(75, 66);
             this.Num2Button.TabIndex = 11;
-            this.Num2Button.Text = "Num2";
+            this.Num2Button.Text = "Доступ выдан";
             this.Num2Button.UseVisualStyleBackColor = true;
             this.Num2Button.Click += new System.EventHandler(this.Num2Button_Click);
             // 
@@ -148,7 +148,7 @@
             this.Num3Button.Name = "Num3Button";
             this.Num3Button.Size = new System.Drawing.Size(75, 66);
             this.Num3Button.TabIndex = 12;
-            this.Num3Button.Text = "Num3";
+            this.Num3Button.Text = "Кро согласование";
             this.Num3Button.UseVisualStyleBackColor = true;
             this.Num3Button.Click += new System.EventHandler(this.Num3Button_Click);
             // 

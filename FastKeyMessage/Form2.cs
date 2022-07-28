@@ -15,12 +15,19 @@ namespace FastKeyMessage
     {
         Pathes pathes = new Pathes();
         int numNubmer = 0;
- 
-
+        public string[] NumButtonsText = new string[9];
         public Form2()
         {
             InitializeComponent();
-
+            NumButtonsText[0] = Num1Button.Text;
+            NumButtonsText[1] = Num2Button.Text;
+            NumButtonsText[2] = Num3Button.Text;
+            NumButtonsText[3] = Num4Button.Text;
+            NumButtonsText[4] = Num5Button.Text;
+            NumButtonsText[5] = Num6Button.Text;
+            NumButtonsText[6] = Num7Button.Text;
+            NumButtonsText[7] = Num8Button.Text;
+            NumButtonsText[8] = Num9Button.Text;
         }
 
         private void Form2_Load(object sender, EventArgs e)
