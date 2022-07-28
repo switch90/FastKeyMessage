@@ -58,6 +58,7 @@ namespace FastKeyMessage
             {
                 popupForm.BackgroundImage = DrawGrid(361, 361);
                 popupForm.Show();
+                SendKeys.Send("{BS}");
             }
         }
 
@@ -92,6 +93,7 @@ namespace FastKeyMessage
 
             if (e.KeyCode == Keys.NumPad0)
             {
+                SendKeys.Send("{BS}");
                 popupForm.Visible = false;
                 System.GC.Collect();
                 System.GC.WaitForPendingFinalizers();
