@@ -14,6 +14,7 @@ namespace FastKeyMessage
     {
         public PopupForm()
         {
+            TopMost = true;
             InitializeComponent();
         }
 
