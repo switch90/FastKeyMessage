@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices;
 using System.Drawing;
 using Microsoft.Toolkit.Uwp.Notifications;
+using System.Text.RegularExpressions;
 
 namespace FastKeyMessage
 {
@@ -45,6 +46,7 @@ namespace FastKeyMessage
             gkh.HookedKeys.Add(Keys.NumPad8);
             gkh.HookedKeys.Add(Keys.NumPad9);
             gkh.HookedKeys.Add(Keys.NumPad0);
+            gkh.HookedKeys.Add(Keys.PageUp);
             gkh.KeyUp += new KeyEventHandler(gkh_KeyUp);
             gkh.KeyDown += new KeyEventHandler(gkh_KeyDown);
             SendNotificaton("Программа запущена, для отображения подсказки - Numpad 0", "Fast Message");
@@ -97,8 +99,19 @@ namespace FastKeyMessage
                 popupForm.Visible = false;
                 System.GC.Collect();
                 System.GC.WaitForPendingFinalizers();
-            }                
-                    
+            }
+            if (e.KeyCode == Keys.PageUp)
+
+            {
+                SendKeys.Send("{BS}");
+                string s = Clipboard.GetText();
+                s = Regex.Replace(s, "([+() -])", "");
+                s = s.Remove(0, 1);
+                s = "98" + s;
+                Clipboard.SetText(s);
+                SendCtrlhotKey('V');
+            }
+
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
