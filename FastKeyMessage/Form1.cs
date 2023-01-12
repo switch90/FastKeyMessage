@@ -105,7 +105,7 @@ namespace FastKeyMessage
             {
                 SendKeys.Send("{BS}");
                 string s = Clipboard.GetText();
-                s = Regex.Replace(s, "([+() -])", "");
+                s = Regex.Replace(s, @"([\s+() -])", "");
                 s = s.Remove(0, 1);
                 s = "98" + s;
                 Clipboard.SetText(s);
